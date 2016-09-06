@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS do nosso site */
+
+body,tr,td{
+	width:250px;
+	padding:3px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+	color:#FFF;
+	float:left;
+	text-align:left;
+	text-decoration:blink;
+}
+
+	

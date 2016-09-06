@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CATEGORIAS</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Seletores de elementos/tag ~~ */
+ul, ol, dl { /* Devido a variações entre navegadores, é recomendado zerar o padding e a margem nas listas. É possível especificar as quantidades aqui ou nos itens da lista (LI, DT, DD) que eles contêm. Lembre-se: o que você fizer aqui ficará em cascata para a lista de navegação a não ser que você escreva outro seletor mais específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* ao remover a margem superior, as margens podem escapar das suas containing div. A margem inferior restante vai mantê-la afastada de qualquer elemento que se segue. */
+	padding-right: 15px;
+	padding-left: 15px; /* adicionando o padding para os lados dos elementos dentro dos divs, ao invés dos próprios divs o livra de qualquer combinação de modelo de caixa. Um div aninhado com padding lateral também pode ser usado como método alternativo. */
+}
+a img { /* esse seletor remove a borda azul padrão exibida em alguns navegadores ao redor de uma imagem circundada por um link. */
+	border: none;
+}
+
+/* ~~ A estilização dos links do seu site deve permanecer nesta ordem – incluindo o grupo de seletores que criam o efeito hover. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a não ser que você estilize seus links para que pareçam extremamente únicos, é melhor utilizar links sublinhados para uma identificação visual mais rápida. */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* esse grupo de seletores dará ao navegador que estiver usando um teclado a mesma experiência hover do que uma pessoa usando um mouse. */
+	text-decoration: none;
+}
+
+/* ~~ esse contêiner de largura fixa cerca todos os outros divs~~ */
+.container {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto; /* o valor automático nos lados, combinado com a largura, centraliza o layout */
+	overflow: hidden; /* essa declaração faz com que o contêiner reconheça o conteúdo das colunas flutuantes e onde elas terminam. */
+}
+
+/* ~~ Essas são as colunas para o layout. ~~ 
+
+1) O padding é posto somente na parte superior e inferior dos divs. Os elementos nesses divs têm padding nos seus lados impedindo o modelo tipo caixa. Lembre-se: ao adicionar qualquer padding lateral ou bordas para o próprio div, ele será adicionado à largura que você define para criar a largura *total*. Também é possível remover o padding no elemento dentro do div e estabelecer um segundo div dentro do primeiro, sem largura, e com o padding necessário para o seu design.
+
+2) Como as colunas são todas flutuantes, não foi dada nenhuma margem. Se for necessário adicionar margem, evite colocá-la no lado flutuante, por exemplo, uma margem direita em um div definido para flutuar à direita. Em vez disso, muitas vezes, o padding é utilizado. Para os divs em que essa regra tem que ser quebrada, é necessário adicionar a declaração "display:inline" que irá solucionar um erro recorrente em algumas versões do Internet Explorer em que a imagem é duplicada.
+
+3) Como as classes podem ser usadas diversas vezes em um documento e um elemento também pode ter várias classes aplicadas, foram atribuídas às colunas nomes de classe ao invés de IDs. Por exemplo, se for necessário, os divs com duas barras laterais podem ser empilhados. Se preferir, é possível alterar facilmente para os IDs desde que esteja usando-os somente uma vez em cada documento.
+
+4) Caso prefira seu navegador à direita ao invés de à esquerda, simplesmente flutue essas colunas para a direção oposta, todas à direita ao invés de à esquerda, e elas irão processar na ordem inversa. Não há necessidade de mover os divs ao redor da fonte HTML.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 180px;
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+.content {
+
+	padding: 10px 0;
+	width: 780px;
+	float: left;
+}
+
+/* ~~ Este seletor agrupado oferece as listas dentro do espaço da área de conteúdo.~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* esse padding espelha o padding direito nos cabeçalhos e regra de parágrafo acima. O padding foi colocado na parte inferior para obter espaço entre outros elementos das listas e à esquerda para criar o recuo. Estes podem ser ajustados como desejar. */
+}
+
+/* ~~ Os estilos de lista de navegação (podem ser removidos se for escolhido o uso de um submenu criado anteriormente, como o Spry) ~~ */
+ul.nav {
+	list-style: none; /* isso remove o marcador de lista */
+	border-top: 1px solid #666; /* isso cria a borda da parte superior para os links – todos os outros são colocados usando uma borda na parte inferior no LI */
+	margin-bottom: 15px; /* isso cria o espaço entre a navegação no conteúdo abaixo */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* isso cria a separação do botão */
+}
+ul.nav a, ul.nav a:visited { /* ao agrupar estes seletores, seus links mantêm a aparência de botão mesmo após terem sido visitados. */
+	padding: 5px 5px 5px 15px;
+	display: block; /* isso fornece as propriedades de bloqueio de links, preenchendo todo o LI. Assim, toda a área responderá ao clique do mouse. */
+	width: 160px;  /*essa largura faz com que o botão inteiro possa ser clicado no IE6. Se não for necessário estar compatível com o IE6, ele pode ser removido. Calcule a largura apropriada subtraindo o padding neste link da largura do contêiner da barra lateral. */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* isso altera o fundo e a cor do texto para navegação com o mouse ou teclado. */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ flutuações diversas/limpeza de classes ~~ */
+.fltrt {  /* essa classe pode ser usada para flutuar um elemento à direita da página. O elemento flutuado deve preceder o elemento e ser o próximo da página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* essa classe pode ser usada para flutuar um elemento à esquerda da página. O elemento flutuado deve preceder o elemento e ser o próximo da página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* essa classe pode ser colocada em um <br /> ou em um div vazio como o elemento final que segue o último div flutuado (no #contêiner) caso o overflow:hidden no contêiner for removido. */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="#">Link um</a></li>
+      <li><a href="#">Link dois</a></li>
+      <li><a href="#">Link três</a></li>
+      <li><a href="#">Link quatro</a></li>
+    </ul>
+    <p> Os links acima demonstram uma estrutura básica de navegação usando uma lista não ordenada com estilo CSS. Use isso como um ponto de partida e modifique as propriedades para produzir uma aparência exclusiva. Se precisar de submenus, crie os seus próprios usando um menu Spry, um menu widget do Exchange da Adobe ou uma variedade de soluções de javascript ou CSS.</p>
+    <p>Caso prefira a navegação ao longo da parte superior, simplesmente mova o ul.nav para o topo da página e crie o estilo novamente.</p>
+    <!-- end .sidebar1 --></div>
+  <div class="content">
+    <h1>Instruções</h1>
+    <p>Saiba que o CSS para esses layouts é altamente comentado. Se fizer a maior parte do seu trabalho na visualização Design, olhe o código para obter dicas sobre como trabalhar com o CSS para os layouts fixos. Você pode remover esses comentários, antes de lançar o site. Para saber mais sobre as técnicas usadas nesses layouts de CSS, leia este artigo no Centro do Desenvolvedor da Adobe - <a href=http://www.adobe.com/go/adc_css_layouts">http://www.adobe.com/go/adc_css_layouts</a>."</p>
+    <h2>Limpeza</h2>
+    <p>Como todas as colunas são flutuantes, esse layout usa o overflow:hidden no contêiner. Essa técnica de limpeza força o contêiner a reconhecer onde as colunas terminam para mostrar quaisquer bordas ou cores de fundo que você tenha colocado. Se houver um elemento muito grande que sobressaia o contêiner, ele aparecerá cortado. Também não é possível usar margens negativas ou posicionamento absoluto com valores negativos para deixar elementos do lado de fora do contêiner ou eles também não serão exibidos fora do contêiner.</p>
+    <p>Se precisar usar essas propriedades, será necessário utilizar um método de limpeza diferente. O mais confiável é adicionar um &lt;br class="clearfloat" /&gt; or &lt;div class="clearfloat"&gt;&lt;/div&gt; após a última coluna flutuante, mas antes do fechamento do contêiner. Isso dará o mesmo efeito de limpeza.</p>
+    <h3>Rodapé</h3>
+    <p>Ao adicionar um rodapé após as colunas, porém ainda dentro do contêiner, causará uma falha no método de limpeza de overflow:hidden. É possível colocar um rodapé em um segundo contêiner do lado de fora do primeiro sem causar danos. A escolha mais simples é iniciar com um layout contendo cabeçalhos e rodapés e remover o cabeçalho para utilizar os métodos de limpeza naquele tipo de layout.</p>
+    <h4>Fundos</h4>
+    <p>A princípio, a cor de fundo em qualquer div somente será exibida para o comprimento do conteúdo. Isso significa que se estiver usando uma cor de fundo ou margem para criar uma aparência de uma coluna lateral, não ocorrerá a extensão até o rodapé e indo somente até o final do conteúdo. Se o .content div tiver sempre mais conteúdo, é possível colocar uma margem no .content div para dividi-lo da coluna.</p>
+    <!-- end .content --></div>
+  <!-- end .container --></div>
+</body>
+</html>
