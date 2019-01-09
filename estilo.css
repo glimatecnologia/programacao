@@ -59,42 +59,22 @@ li {  }
     font-style: normal;
 }
 
-body {
-    font-size: 12px;
-    font-family:'MyriadRoman', Tahoma, Arial;
-}
+/* formatando o corpo da página */
+body {    font-size: 12px; font-family:'MyriadRoman', Tahoma, Arial;}
 
-a {
-    color: #000;
-}
+a {color: #000;}
 
-img {
-    border: none;
-}
+img {border: none;}
 
-h1, h2 {
-    font-weight: lighter;    
-    font-family:'MyriadRoman', Tahoma, Arial;
-}
+h1, h2 {font-weight: lighter;font-family:'MyriadRoman', Tahoma, Arial;}
 
-h1 {
+h1 {font-size: 18px;}
 
-    font-size: 18px;
-}
+h2 {color: #001f46;font-size: 18px;}
 
-h2 {
-    color: #001f46;
-    font-size: 18px;    
-}
+h3 { }
 
-h3 {
-}
-
-.menor {
-    color: #022b61;
-    font-weight:  lighter;
-    font-size: 11px;    
-}
+.menor {color: #022b61;font-weight: lighter;font-size: 11px;}
 
 /* CLASS */
 
